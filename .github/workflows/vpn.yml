@@ -1,14 +1,17 @@
 name: Exit Node Server
 
 on:
+
+  schedule:
+    - cron: "11 2,6,10,14,18,22 * * *"
+      timezone: 'Asia/Shanghai'
+
   workflow_dispatch:
 
 jobs:
   tailscale:
     runs-on: ubuntu-24.04
-    # Free users have only 2,000 minutes GitHub Actions usage - Use them wisely.
-    # We strongly recommended you to cancel the workflow after finishing your work.
-    timeout-minutes: 2000
+    timeout-minutes: 114514
 
     steps:
       - name: Update APT
