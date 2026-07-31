@@ -3,7 +3,7 @@ name: Exit Node Server
 on:
 
   schedule:
-    - cron: "11 1,4,7,10,13,16,19,22 * * *"
+    - cron: "11 1,3,5,7,9,11,13,15,17,19,21,23 * * *"
       timezone: 'Asia/Shanghai'
 
   workflow_dispatch:
