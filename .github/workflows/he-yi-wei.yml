@@ -20,7 +20,7 @@ jobs:
       - name: 意义不明
         run: |
           sleep 30
-          gh workflow run he-yi-wei.yml
+          gh workflow run he-yi-wei.yml --repo FakeHydrogen/hello
         env:
           GITHUB_TOKEN: ${{ secrets.WTF }}
       - name: 意义不明
