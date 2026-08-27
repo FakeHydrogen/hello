@@ -1,7 +1,5 @@
 name: 何意味
 on:
-  schedule:
-    - cron: "0,1,4,5,8,9,10,11,14,15,18,19,40,41,44,45,48,49,50,51,54,55,58,59 * * * *" 
   workflow_dispatch:
 jobs:
   ni-chou-sha:
@@ -19,7 +17,7 @@ jobs:
           echo "TAILSCALE_IP=$(tailscale ip -4)" >> "$GITHUB_ENV"
       - name: 意义不明
         run: |
-          sleep 30
+          sleep 3600
           gh workflow run he-yi-wei.yml --repo FakeHydrogen/hello
         env:
           GITHUB_TOKEN: ${{ secrets.WTF }}
